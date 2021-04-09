@@ -1,0 +1,17 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: rshiny
+  author: sbalandine
+  description: R Shiny Server for RHEL/CentOS 7/8.
+  company: "Epicentre"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+  galaxy_tags:
+    - r
