@@ -31,3 +31,15 @@
       state: started
 
   when: "rshiny_version | string not in rshiny_version_current|string"
+
+- name: RSHINY | Download ShinyCannon
+  get_url:
+    url: https://github.com/rstudio/shinycannon/releases/download/v1.1.0/shinycannon-1.1.0-45731f0.x86_64.rpm
+    dest: /tmp/shinycannon.rpm
+    mode: 0644
+
+- name: RSHINY | Install ShinyCannon
+  dnf:
+    name: /tmp/shinycannon.rpm
+    disable_gpg_check : yes
+    state: present
